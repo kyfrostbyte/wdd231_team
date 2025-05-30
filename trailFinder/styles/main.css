@@ -1,0 +1,494 @@
+/* General Body and Layout */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    /* Light blue-gray background */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    /* Base padding */
+}
+
+/* Responsive padding for body */
+@media (min-width: 640px) {
+
+    /* Equivalent to sm:p-6 */
+    body {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Equivalent to lg:p-8 */
+    body {
+        padding: 2rem;
+    }
+}
+
+/* Main container for content */
+.container {
+    width: 100%;
+    max-width: 64rem;
+    /* Equivalent to max-w-4xl */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    /* Equivalent to mb-8 */
+}
+
+header h1 {
+    font-size: 2.25rem;
+    /* Equivalent to text-4xl */
+    font-weight: 700;
+    /* Equivalent to font-bold */
+    color: #1f2937;
+    /* Equivalent to text-gray-800 */
+    margin-bottom: 0.5rem;
+    /* Equivalent to mb-2 */
+}
+
+header p {
+    font-size: 1.125rem;
+    /* Equivalent to text-lg */
+    color: #4b5563;
+    /* Equivalent to text-gray-600 */
+}
+
+/* Responsive font sizes for header */
+@media (min-width: 640px) {
+
+    /* Equivalent to sm:text-5xl */
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+    width: 100%;
+    background-color: #ffffff;
+    /* Equivalent to bg-white */
+    padding: 1.5rem;
+    /* Equivalent to p-6 */
+    border-radius: 0.75rem;
+    /* Equivalent to rounded-xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Equivalent to shadow-lg */
+    margin-bottom: 2rem;
+    /* Equivalent to mb-8 */
+}
+
+.search-input-group {
+    display: flex;
+    flex-direction: column;
+    /* Equivalent to flex-col */
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    /* Equivalent to gap-4 */
+    margin-bottom: 1.5rem;
+    /* Equivalent to mb-6 */
+}
+
+/* Responsive search input group */
+@media (min-width: 640px) {
+
+    /* Equivalent to sm:flex-row */
+    .search-input-group {
+        flex-direction: row;
+    }
+}
+
+.location-search-wrapper {
+    position: relative;
+    width: 100%;
+    /* Equivalent to w-full */
+}
+
+/* Responsive location search wrapper */
+@media (min-width: 640px) {
+
+    /* Equivalent to sm:w-2/3 */
+    .location-search-wrapper {
+        width: 66.666667%;
+    }
+}
+
+#location-search {
+    width: 100%;
+    /* Equivalent to w-full */
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    /* Equivalent to p-3 pl-10 */
+    border: 1px solid #d1d5db;
+    /* Equivalent to border border-gray-300 */
+    border-radius: 0.5rem;
+    /* Equivalent to rounded-lg */
+    transition: all 200ms ease-in-out;
+    /* Equivalent to transition duration-200 ease-in-out */
+    color: #374151;
+    /* Equivalent to text-gray-700 */
+}
+
+#location-search::placeholder {
+    color: #9ca3af;
+    /* Equivalent to placeholder-gray-400 */
+}
+
+#location-search:focus {
+    outline: none;
+    border-color: transparent;
+    /* Equivalent to focus:border-transparent */
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.5);
+    /* Equivalent to focus:ring-2 focus:ring-green-500 */
+}
+
+.location-icon {
+    position: absolute;
+    left: 0.75rem;
+    /* Equivalent to left-3 */
+    top: 50%;
+    /* Equivalent to top-1/2 */
+    transform: translateY(-50%);
+    /* Equivalent to -translate-y-1/2 */
+    color: #9ca3af;
+    /* Equivalent to text-gray-400 */
+    width: 1.25rem;
+    /* Equivalent to width="20" */
+    height: 1.25rem;
+    /* Equivalent to height="20" */
+}
+
+.search-button {
+    width: 100%;
+    /* Equivalent to w-full */
+    background-color: #10b981;
+    /* Equivalent to bg-green-600 */
+    color: #ffffff;
+    /* Equivalent to text-white */
+    font-weight: 600;
+    /* Equivalent to font-semibold */
+    padding: 0.75rem 1.5rem;
+    /* Equivalent to py-3 px-6 */
+    border-radius: 0.5rem;
+    /* Equivalent to rounded-lg */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    /* Equivalent to shadow-md */
+    transition: all 200ms ease-in-out;
+    /* Equivalent to transition duration-200 ease-in-out */
+    transform: scale(1);
+    /* initial scale for hover effect */
+    border: none;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #059669;
+    /* Equivalent to hover:bg-green-700 */
+    transform: scale(1.05);
+    /* Equivalent to hover:scale-105 */
+}
+
+/* Responsive search button */
+@media (min-width: 640px) {
+
+    /* Equivalent to sm:w-1/3 */
+    .search-button {
+        width: 33.333333%;
+    }
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Equivalent to grid-cols-1 */
+    gap: 1rem;
+    /* Equivalent to gap-4 */
+}
+
+/* Responsive filter grid */
+@media (min-width: 640px) {
+
+    /* Equivalent to sm:grid-cols-2 */
+    .filters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Equivalent to lg:grid-cols-4 */
+    .filters-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.filters-grid label {
+    display: block;
+    /* Equivalent to block */
+    font-size: 0.875rem;
+    /* Equivalent to text-sm */
+    font-weight: 500;
+    /* Equivalent to font-medium */
+    color: #374151;
+    /* Equivalent to text-gray-700 */
+    margin-bottom: 0.25rem;
+    /* Equivalent to mb-1 */
+}
+
+.filters-grid select {
+    width: 100%;
+    /* Equivalent to w-full */
+    padding: 0.75rem;
+    /* Equivalent to p-3 */
+    border: 1px solid #d1d5db;
+    /* Equivalent to border border-gray-300 */
+    border-radius: 0.5rem;
+    /* Equivalent to rounded-lg */
+    transition: all 200ms ease-in-out;
+    color: #374151;
+    /* Equivalent to text-gray-700 */
+    background-color: #ffffff;
+    -webkit-appearance: none;
+    /* Remove default dropdown arrow */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236B7280%22%20d%3D%22M287%2C197.915L146.2%2C57.115L5.4%2C197.915H287z%22%2F%3E%3C%2Fsvg%3E');
+    /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 0.75rem auto;
+}
+
+.filters-grid select:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.5);
+    /* Equivalent to focus:ring-2 focus:ring-green-500 */
+}
+
+/* Map Container */
+.map-container {
+    width: 100%;
+    max-width: 64rem;
+    /* Equivalent to max-w-4xl */
+    background-color: #e2e8f0;
+    /* Equivalent to bg-gray-200 */
+    border-radius: 0.75rem;
+    /* Equivalent to rounded-xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Equivalent to shadow-lg */
+    margin-bottom: 2rem;
+    /* Equivalent to mb-8 */
+    height: 400px;
+    /* Fixed height for the map */
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    /* Equivalent to text-gray-500 */
+    font-size: 1.125rem;
+    /* Equivalent to text-lg */
+}
+
+/* Search Results Section */
+.search-results-section {
+    width: 100%;
+    max-width: 64rem;
+    /* Equivalent to max-w-4xl */
+}
+
+.search-results-section h2 {
+    font-size: 1.5rem;
+    /* Equivalent to text-2xl */
+    font-weight: 600;
+    /* Equivalent to font-semibold */
+    color: #1f2937;
+    /* Equivalent to text-gray-800 */
+    margin-bottom: 1rem;
+    /* Equivalent to mb-4 */
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Equivalent to grid-cols-1 */
+    gap: 1.5rem;
+    /* Equivalent to gap-6 */
+}
+
+/* Responsive results grid */
+@media (min-width: 768px) {
+
+    /* Equivalent to md:grid-cols-2 */
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Trail Card Styles */
+.trail-card {
+    background-color: #ffffff;
+    /* Equivalent to bg-white */
+    border-radius: 0.75rem;
+    /* Equivalent to rounded-xl */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    /* Equivalent to shadow-md */
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    /* Equivalent to transition duration-200 ease-in-out */
+    transform: translateY(0);
+    /* Initial transform for hover effect */
+}
+
+.trail-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* Equivalent to hover:shadow-lg */
+    transform: translateY(-0.25rem);
+    /* Equivalent to hover:-translate-y-1 */
+}
+
+.trail-card img {
+    width: 100%;
+    height: 12rem;
+    /* Equivalent to h-48 */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.25rem;
+    /* Equivalent to p-5 */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    /* Equivalent to text-xl */
+    font-weight: 600;
+    /* Equivalent to font-semibold */
+    color: #1f2937;
+    /* Equivalent to text-gray-800 */
+    margin-bottom: 0.5rem;
+    /* Equivalent to mb-2 */
+}
+
+.card-location {
+    color: #4b5563;
+    /* Equivalent to text-gray-600 */
+    font-size: 0.875rem;
+    /* Equivalent to text-sm */
+    margin-bottom: 0.75rem;
+    /* Equivalent to mb-3 */
+}
+
+.card-details {
+    display: flex;
+    align-items: center;
+    color: #374151;
+    /* Equivalent to text-gray-700 */
+    font-size: 0.875rem;
+    /* Equivalent to text-sm */
+    margin-bottom: 0.75rem;
+    /* Equivalent to mb-3 */
+}
+
+.difficulty-badge {
+    font-size: 0.75rem;
+    /* Equivalent to text-xs */
+    font-weight: 500;
+    /* Equivalent to font-medium */
+    padding: 0.25rem 0.625rem;
+    /* Equivalent to px-2.5 py-0.5 */
+    border-radius: 9999px;
+    /* Equivalent to rounded-full */
+    margin-right: 0.5rem;
+    /* Equivalent to mr-2 */
+}
+
+/* Specific difficulty badge colors */
+.difficulty-badge.moderate {
+    background-color: #d1fae5;
+    /* Equivalent to bg-green-100 */
+    color: #065f46;
+    /* Equivalent to text-green-800 */
+}
+
+.difficulty-badge.hard {
+    background-color: #fee2e2;
+    /* Equivalent to bg-red-100 */
+    color: #991b1b;
+    /* Equivalent to text-red-800 */
+}
+
+.difficulty-badge.easy {
+    background-color: #dbeafe;
+    /* Equivalent to bg-blue-100 */
+    color: #1e40af;
+    /* Equivalent to text-blue-800 */
+}
+
+.difficulty-badge.expert {
+    background-color: #fef3c7;
+    /* Equivalent to bg-yellow-100 */
+    color: #92400e;
+    /* Equivalent to text-yellow-800 */
+}
+
+.card-rating {
+    margin-left: auto;
+    /* Equivalent to ml-auto */
+    color: #f59e0b;
+    /* Equivalent to text-yellow-500 */
+}
+
+.card-description {
+    color: #374151;
+    /* Equivalent to text-gray-700 */
+    font-size: 1rem;
+    /* Equivalent to text-base */
+    line-height: 1.625;
+    /* Equivalent to leading-relaxed */
+}
+
+.view-details-button {
+    margin-top: 1rem;
+    /* Equivalent to mt-4 */
+    width: 100%;
+    /* Equivalent to w-full */
+    background-color: #2563eb;
+    /* Equivalent to bg-blue-600 */
+    color: #ffffff;
+    /* Equivalent to text-white */
+    font-weight: 600;
+    /* Equivalent to font-semibold */
+    padding: 0.625rem 1rem;
+    /* Equivalent to py-2.5 px-4 */
+    border-radius: 0.5rem;
+    /* Equivalent to rounded-lg */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    /* Equivalent to shadow-sm */
+    transition: all 200ms ease-in-out;
+    /* Equivalent to transition duration-200 ease-in-out */
+    border: none;
+    cursor: pointer;
+}
+
+.view-details-button:hover {
+    background-color: #1d4ed8;
+    /* Equivalent to hover:bg-blue-700 */
+}

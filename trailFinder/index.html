@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking Trail Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="antialiased">
+    <div class="container">
+        <header>
+            <h1>Find Your Next Adventure</h1>
+            <p>Discover amazing hiking trails near you.</p>
+        </header>
+
+        <section class="search-filter-section">
+            <div class="search-input-group">
+                <div class="location-search-wrapper">
+                    <input type="text" id="location-search" placeholder="Enter location (e.g., Boulder, CO)">
+                    <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="10" r="3" />
+                        <path
+                            d="M12 21.7C17.3 17 22 13.5 22 10.2 22 6.5 19.3 4 16 4c-1.8 0-3.5.8-4.7 2-1.2-1.2-2.9-2-4.7-2-3.3 0-6 2.5-6 6.2 0 3.3 4.7 6.8 10 11.5z" />
+                    </svg>
+                </div>
+                <button class="search-button">
+                    Search Trails
+                </button>
+            </div>
+
+            <div class="filters-grid">
+                <div>
+                    <label for="difficulty-filter">Difficulty</label>
+                    <select id="difficulty-filter">
+                        <option value="">Any</option>
+                        <option value="easy">Easy</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="hard">Hard</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="length-filter">Length (miles)</label>
+                    <select id="length-filter">
+                        <option value="">Any</option>
+                        <option value="0-5">0-5</option>
+                        <option value="5-10">5-10</option>
+                        <option value="10+">10+</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="elevation-filter">Elevation Gain (ft)</label>
+                    <select id="elevation-filter">
+                        <option value="">Any</option>
+                        <option value="0-500">0-500</option>
+                        <option value="500-1000">500-1000</option>
+                        <option value="1000+">1000+</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="rating-filter">Min. Rating</label>
+                    <select id="rating-filter">
+                        <option value="">Any</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-container">
+            <div id="mapbox-map" class="map-placeholder">
+                Map will be displayed here
+            </div>
+        </section>
+
+        <section class="search-results-section">
+            <h2>Search Results</h2>
+            <div id="search-results" class="results-grid">
+                <div class="trail-card">
+                    <img src="https://placehold.co/600x400/9ca3af/ffffff?text=Trail+Image+1" alt="Mountain Trail">
+                    <div class="card-content">
+                        <h3 class="card-title">Emerald Lake Trail</h3>
+                        <p class="card-location">Rocky Mountain National Park, CO</p>
+                        <div class="card-details">
+                            <span class="difficulty-badge moderate">Moderate</span>
+                            <span>5.2 miles</span>
+                            <span class="card-rating">★★★★☆ (4.5)</span>
+                        </div>
+                        <p class="card-description">
+                            A popular trail leading to a stunning alpine lake with breathtaking views of surrounding
+                            peaks.
+                            Known for its accessibility and beautiful scenery.
+                        </p>
+                        <button class="view-details-button">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="trail-card">
+                    <img src="https://placehold.co/600x400/a3a3a3/ffffff?text=Trail+Image+2" alt="Forest Trail">
+                    <div class="card-content">
+                        <h3 class="card-title">Bear Peak via Fern Canyon</h3>
+                        <p class="card-location">Boulder, CO</p>
+                        <div class="card-details">
+                            <span class="difficulty-badge hard">Hard</span>
+                            <span>6.5 miles</span>
+                            <span class="card-rating">★★★★☆ (4.8)</span>
+                        </div>
+                        <p class="card-description">
+                            A challenging ascent to Bear Peak offering panoramic views of Boulder and the plains.
+                            Steep sections and rocky terrain.
+                        </p>
+                        <button class="view-details-button">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="trail-card">
+                    <img src="https://placehold.co/600x400/d1d5db/ffffff?text=Trail+Image+3" alt="Lakeside Trail">
+                    <div class="card-content">
+                        <h3 class="card-title">Lily Lake Loop</h3>
+                        <p class="card-location">Estes Park, CO</p>
+                        <div class="card-details">
+                            <span class="difficulty-badge easy">Easy</span>
+                            <span>0.8 miles</span>
+                            <span class="card-rating">★★★★★ (4.9)</span>
+                        </div>
+                        <p class="card-description">
+                            A short, accessible loop around a beautiful lake, perfect for families and a quick stroll.
+                            Offers stunning reflections of Longs Peak.
+                        </p>
+                        <button class="view-details-button">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="trail-card">
+                    <img src="https://placehold.co/600x400/e5e7eb/ffffff?text=Trail+Image+4" alt="Canyon Trail">
+                    <div class="card-content">
+                        <h3 class="card-title">Flatirons Vista Trail</h3>
+                        <p class="card-location">Boulder, CO</p>
+                        <div class="card-details">
+                            <span class="difficulty-badge moderate">Moderate</span>
+                            <span>3.3 miles</span>
+                            <span class="card-rating">★★★★☆ (4.2)</span>
+                        </div>
+                        <p class="card-description">
+                            A relatively flat trail with excellent views of the iconic Flatirons. Great for a quick hike
+                            or run.
+                        </p>
+                        <button class="view-details-button">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
