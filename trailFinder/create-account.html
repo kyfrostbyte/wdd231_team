@@ -1,29 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Create Account</title>
-  <link rel="stylesheet" href="src/styles/create-account.css" />
-   <script src="src/scripts/create-account.js" type="module"></script>
-   <link rel="icon" type="image/webp" href="src/assets/logo.webp" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="src/styles/create-account.css" />
+    <script src="src/scripts/create-account.js" type="module"></script>
+    <link rel="icon" type="image/webp" href="src/assets/logo.webp" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Create Account</h2>
+      <form id="account-form" aria-describedby="message">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Full Name"
+          required
+          autocomplete="name"
+        />
 
-  
-</head>
-<body>
-  <div class="form-container">
-    <h2>Create Account</h2>
-    <form id="account-form">
-      <input type="text" id="name" placeholder="Full Name" required />
-      <input type="email" id="email" placeholder="Email" required />
-      <input type="text" id="username" placeholder="Username" required />
-      <input type="password" id="password" placeholder="Password" required />
-      <input type="tel" id="phone" placeholder="Phone Number" required />
-      <button type="submit">Create Account</button>
-      <p id="message"></p>
-    </form>
-    <a href="index.html" class="back-link">Back to Login</a>
-  </div>
-  <script src="create-account.js"></script>
-</body>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+          autocomplete="email"
+        />
+
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+          autocomplete="username"
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+          autocomplete="new-password"
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone Number"
+          required
+          autocomplete="tel"
+        />
+
+        <button type="submit">Create Account</button>
+        <p id="message" aria-live="polite"></p>
+      </form>
+      <a href="index.html" class="back-link">Back to Login</a>
+    </div>
+    <script src="src/scripts/create-account.js"></script>
+  </body>
 </html>
