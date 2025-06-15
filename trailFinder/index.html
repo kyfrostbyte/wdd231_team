@@ -13,6 +13,7 @@
     <script src="src/scripts/map.js" defer></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js"></script>
+    <script id="search-js" defer src="https://api.mapbox.com/search-js/v1.0.0/web.js"></script>
 </head>
 
 <body class="antialiased">
@@ -22,18 +23,6 @@
     <div class="container">
         <section class="search-filter-section">
             <div class="search-input-group">
-                <div class="location-search-wrapper">
-                    <mapbox-search-box type="text" id="location-search"
-                        placeholder="Enter location (e.g., Boulder, CO)"></mapbox-search-box>
-                    <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="10" r="3" />
-                        <path
-                            d="M12 21.7C17.3 17 22 13.5 22 10.2 22 6.5 19.3 4 16 4c-1.8 0-3.5.8-4.7 2-1.2-1.2-2.9-2-4.7-2-3.3 0-6 2.5-6 6.2 0 3.3 4.7 6.8 10 11.5z" />
-                    </svg>
-                </div>
-                <button class="search-button">Search Trails</button>
             </div>
 
             <div class="filters-grid">
@@ -79,7 +68,7 @@
 
         <section class="map-container">
             <div id="map" class="map-placeholder">
-                Map is loading.
+                Map is loading...
             </div>
         </section>
 
