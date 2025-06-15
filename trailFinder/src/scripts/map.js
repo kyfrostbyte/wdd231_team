@@ -1,36 +1,37 @@
 const ACCESS_TOKEN = 'pk.eyJ1IjoidHJveW8xIiwiYSI6ImNtYjcxc3dnbTAyZTUycm9odzJiNHc4a3QifQ.Dlfa6v5rYq27SCK6T7_3dg';
 mapboxgl.accessToken = ACCESS_TOKEN;
-const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/outdoors-v12',
-    center: [-73.99209, 40.68933],
-    zoom: 8.8
-});
-const searchButton = document.querySelector('.search-button');
 
-let currentMarker = null;
-let searchBox = null;
+const script = document.getElementById('search-js');
+script.onload = function() {
+    const mapboxAccessToken = ACCESS_TOKEN;
 
-window.addEventListener('load', () => {
-    // Initialize the search box but don't add it to the map
-    searchBox = new MapboxSearchBox();
-    searchBox.accessToken = ACCESS_TOKEN;
+    // Instantiate the map
+    const map = new mapboxgl.Map({
+        accessToken: mapboxAccessToken,
+        container: 'map',
+        style: 'mapbox://styles/mapbox/outdoors-v12',
+        center: [38.8951, -77.0364],
+        zoom: 3
+    });
+
+    // Instantiate the search box
+    const searchBox = new mapboxsearch.MapboxSearchBox();
+    searchBox.accessToken = mapboxAccessToken;
     searchBox.options = {
-        types: 'address,poi',
-        proximity: [-73.99209, 40.68933]
+        language: 'es',
+        country: 'US'
     };
-    searchBox.marker = true;
+
+    // Enable marker and bind to map
     searchBox.mapboxgl = mapboxgl;
-    searchBox.componentOptions = { allowReverse: true, flipCoordinates: true };
-    searchBox.options.poi_category = "hiking";
-    map.addControl(searchBox);
-});
+    searchBox.marker = true;
+    searchBox.bindMap(map);
 
-function makeSearch() {
-    const searchInput = document.querySelector('#location-search');
-    let query = searchInput.value;
-    console.log(query);
-    searchBox.search(query);
-};
+    searchBox.addEventListener('retrieve', (e) => {
+        const feature = e.detail; // This is the GeoJSON object for the selected result
+        console.log(feature);
+    });
 
-searchButton.addEventListener('click', makeSearch);
+    // Add the search box to the DOM
+    document.querySelector('.search-input-group').appendChild(searchBox);
+}
