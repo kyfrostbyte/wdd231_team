@@ -11,6 +11,10 @@ export function footerTemplate() {
 }
 
 export function navTemplate() {
+  const users = JSON.parse(localStorage.getItem('users') || '{}');
+  const loggedInUser = localStorage.getItem('loggedInUser');
+  const isLoggedIn = loggedInUser && users[loggedInUser];
+
   return `
     <nav class="navbar">
       <div class="nav-container">
@@ -23,7 +27,8 @@ export function navTemplate() {
         <li><a href="index.html">Home</a></li>
         <li><a href="coming-soon.html">Trails</a></li>
         <li><a href="coming-soon.html">About</a></li>
+        <li><a href="${isLoggedIn ? 'profile.html' : 'login.html'}">${isLoggedIn ? 'Profile' : 'Login'}</a></li>
       </ul>
-  </nav>
+    </nav>
   `;
 }

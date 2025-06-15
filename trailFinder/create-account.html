@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <link rel="stylesheet" href="src/styles/create-account.css" />
+   <script src="src/scripts/create-account.js" type="module"></script>
+  
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create Account</h2>
+    <form id="account-form">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <button type="submit">Create Account</button>
+      <p id="message"></p>
+    </form>
+    <a href="index.html" class="back-link">Back to Login</a>
+  </div>
+  <script src="create-account.js"></script>
+</body>
+</html>

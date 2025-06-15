@@ -495,7 +495,42 @@ header p {
     /* Equivalent to hover:bg-blue-700 */
 }
 
-/* Base (Mobile-First) Nav Styles */
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Base Nav Styles */
 .navbar {
     width: 100vw;
     background-color: #383332;
@@ -514,6 +549,11 @@ header p {
 .nav-logo img {
     width: 70px;
     height: 70px;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo img:hover {
+    transform: scale(1.1);
 }
 
 .nav-links {
@@ -525,6 +565,7 @@ header p {
     padding: 0 1rem;
     background-color: #383332;
     width: 100%;
+    animation: fadeInDown 0.4s ease forwards;
 }
 
 .nav-links.active {
@@ -543,10 +584,12 @@ header p {
     font-size: 1.2rem;
     padding: 0.5rem 0;
     font-weight: 800;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links a:hover {
     color: #99c749;
+    transform: scale(1.05);
 }
 
 .nav-toggle {
@@ -556,6 +599,7 @@ header p {
     font-size: 2rem;
     color: white;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .nav-toggle:hover {
@@ -569,7 +613,6 @@ header p {
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
-
     }
 
     .nav-toggle {
@@ -586,11 +629,11 @@ header p {
         flex-direction: row;
         width: auto;
         gap: 1rem;
+        animation: none;
     }
 
     .nav-links li {
         width: auto;
-
     }
 
     .nav-links a {
@@ -610,7 +653,10 @@ footer {
     font-family: Arial, sans-serif;
     font-size: 0.9rem;
     box-sizing: border-box;
-    transform: translateY(100px);
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
 }
 
 footer p {
