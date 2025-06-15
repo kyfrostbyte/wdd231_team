@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const password = loginForm.password.value;
 
     const users = getUsers();
-    console.log('Users:', users);
-    console.log('Logging in:', username, password);
+
 
     if (users[username] && users[username].password === password) {
     localStorage.setItem('loggedInUser', username);

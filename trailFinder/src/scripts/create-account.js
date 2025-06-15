@@ -80,6 +80,10 @@ form.addEventListener('submit', (e) => {
   users[username] = { name, email, password, phone };
   setUsers(users);
 
+  // Log the user in by saving username in localStorage
+localStorage.setItem('loggedInUser', username);
+
+
   message.style.color = 'green';
   message.textContent = 'Account created successfully! Redirecting...';
 
