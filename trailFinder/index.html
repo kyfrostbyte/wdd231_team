@@ -10,11 +10,8 @@
     <link rel="stylesheet" href="src/styles/main.css" />
     <link rel="stylesheet" href="src/styles/index.css" />
     <script src="src/scripts/index.js" type="module"></script>
-    <script src="src/scripts/map.js" defer></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js"></script>
+    <script src="src/scripts/search.js" type="module"></script>
     <link rel="icon" type="image/webp" href="src/assets/logo.webp" />
-    <script id="search-js" defer src="https://api.mapbox.com/search-js/v1.0.0/web.js"></script>
 </head>
 
 <body class="antialiased">
@@ -24,6 +21,7 @@
     <div class="container">
         <section class="search-filter-section">
             <div class="search-input-group">
+                <input type="text" id="search-box" placeholder="Search by trail name...">
             </div>
 
             <div class="filters-grid">
@@ -67,89 +65,9 @@
             </div>
         </section>
 
-        <section class="map-container">
-            <div id="map" class="map-placeholder">
-                Map is loading...
-            </div>
-        </section>
-
         <section class="search-results-section">
             <h2>Search Results</h2>
-            <div id="search-results" class="results-grid">
-                <div class="trail-card">
-                    <img src="https://placehold.co/600x400/9ca3af/ffffff?text=Trail+Image+1" alt="Mountain Trail" />
-                    <div class="card-content">
-                        <h3 class="card-title">Emerald Lake Trail</h3>
-                        <p class="card-location">Rocky Mountain National Park, CO</p>
-                        <div class="card-details">
-                            <span class="difficulty-badge moderate">Moderate</span>
-                            <span>5.2 miles</span>
-                            <span class="card-rating">★★★★☆ (4.5)</span>
-                        </div>
-                        <p class="card-description">
-                            A popular trail leading to a stunning alpine lake with
-                            breathtaking views of surrounding peaks. Known for its
-                            accessibility and beautiful scenery.
-                        </p>
-                        <button class="view-details-button">View Details</button>
-                    </div>
-                </div>
-
-                <div class="trail-card">
-                    <img src="https://placehold.co/600x400/a3a3a3/ffffff?text=Trail+Image+2" alt="Forest Trail" />
-                    <div class="card-content">
-                        <h3 class="card-title">Bear Peak via Fern Canyon</h3>
-                        <p class="card-location">Boulder, CO</p>
-                        <div class="card-details">
-                            <span class="difficulty-badge hard">Hard</span>
-                            <span>6.5 miles</span>
-                            <span class="card-rating">★★★★☆ (4.8)</span>
-                        </div>
-                        <p class="card-description">
-                            A challenging ascent to Bear Peak offering panoramic views of
-                            Boulder and the plains. Steep sections and rocky terrain.
-                        </p>
-                        <button class="view-details-button">View Details</button>
-                    </div>
-                </div>
-
-                <div class="trail-card">
-                    <img src="https://placehold.co/600x400/d1d5db/ffffff?text=Trail+Image+3" alt="Lakeside Trail" />
-                    <div class="card-content">
-                        <h3 class="card-title">Lily Lake Loop</h3>
-                        <p class="card-location">Estes Park, CO</p>
-                        <div class="card-details">
-                            <span class="difficulty-badge easy">Easy</span>
-                            <span>0.8 miles</span>
-                            <span class="card-rating">★★★★★ (4.9)</span>
-                        </div>
-                        <p class="card-description">
-                            A short, accessible loop around a beautiful lake, perfect for
-                            families and a quick stroll. Offers stunning reflections of
-                            Longs Peak.
-                        </p>
-                        <button class="view-details-button">View Details</button>
-                    </div>
-                </div>
-
-                <div class="trail-card">
-                    <img src="https://placehold.co/600x400/e5e7eb/ffffff?text=Trail+Image+4" alt="Canyon Trail" />
-                    <div class="card-content">
-                        <h3 class="card-title">Flatirons Vista Trail</h3>
-                        <p class="card-location">Boulder, CO</p>
-                        <div class="card-details">
-                            <span class="difficulty-badge moderate">Moderate</span>
-                            <span>3.3 miles</span>
-                            <span class="card-rating">★★★★☆ (4.2)</span>
-                        </div>
-                        <p class="card-description">
-                            A relatively flat trail with excellent views of the iconic
-                            Flatirons. Great for a quick hike or run.
-                        </p>
-                        <button class="view-details-button">View Details</button>
-                    </div>
-                </div>
-            </div>
+            <div id="search-results" class="results-grid"></div>
         </section>
     </div>
     <footer></footer>
