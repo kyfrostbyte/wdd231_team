@@ -63,19 +63,23 @@ body {
   border: 3px solid #99c749;
 }
 
-/* Logout button */
-#logout {
+/* Buttons */
+#logout,
+#back-home {
   width: 100%;
-  margin-top: 2.5rem;
   padding: 0.75rem;
-  background-color: #383332;
-  color: #fff;
-  border: none;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
+}
+
+#logout {
+  margin-top: 2.5rem;
+  background-color: #383332;
+  color: #fff;
+  border: none;
 }
 
 #logout:hover {
@@ -84,17 +88,10 @@ body {
 }
 
 #back-home {
-  width: 100%;
   margin-top: 1rem;
-  padding: 0.7rem;
   background-color: transparent;
   color: #383332;
   border: 2px solid #383332;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 #back-home:hover {
@@ -103,14 +100,64 @@ body {
   border-color: #99c749;
 }
 
-/* Responsive tweak */
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .profile-container {
-    margin: 1rem;
-    padding: 2rem 1.5rem;
+    margin: 1.2rem;
+    padding: 1.8rem 1.2rem;
+    max-width: 95%;
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .profile-avatar {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+
+  .profile-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
   }
 
   .profile-container p {
     font-size: 1rem;
+    padding: 0.75rem 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .profile-container strong {
+    font-weight: 700;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+  .profile-container span {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  #logout,
+  #back-home {
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1.2rem;
+  }
+
+  #logout {
+    background-color: #383332;
+  }
+
+  #back-home {
+    border-width: 1.8px;
   }
 }
