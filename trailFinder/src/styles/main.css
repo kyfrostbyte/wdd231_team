@@ -631,6 +631,23 @@ footer a:hover {
     text-decoration: none;
 }
 
+/* Profile link indicator */
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #4caf50; /* green */
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.8);
+}
+
+
 /* Desktop Styles (Min-width: 769px) */
 @media (min-width: 769px) {
     .navbar {

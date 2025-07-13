@@ -27,7 +27,13 @@ export function navTemplate() {
         <li><a href="index.html">Home</a></li>
         <li><a href="coming-soon.html">Trails</a></li>
         <li><a href="coming-soon.html">About</a></li>
-        <li><a href="${isLoggedIn ? 'profile.html' : 'login.html'}">${isLoggedIn ? 'Profile' : 'Login'}</a></li>
+        <li>
+          <a href="${isLoggedIn ? 'profile.html' : 'login.html'}">
+            ${isLoggedIn 
+              ? `<span class="profile-link"><span class="status-dot"></span> Profile</span>` 
+              : 'Login'}
+          </a>
+        </li>
       </ul>
     </nav>
   `;
