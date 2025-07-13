@@ -9,6 +9,7 @@
   border-radius: 0.5rem;
   border: 1px solid #d1d5db;
   transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+ 
 }
 
 #search-box:focus {
@@ -16,3 +17,4 @@
   border-color: #3b82f6;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
+
