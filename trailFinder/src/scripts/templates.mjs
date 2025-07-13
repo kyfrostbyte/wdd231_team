@@ -29,12 +29,15 @@ export function navTemplate() {
         <li><a href="coming-soon.html">About</a></li>
         <li>
           <a href="${isLoggedIn ? 'profile.html' : 'login.html'}">
-            ${isLoggedIn 
-              ? `<span class="profile-link"><span class="status-dot"></span> Profile</span>` 
-              : 'Login'}
+            ${isLoggedIn ? 'Profile' : 'Login'}
           </a>
         </li>
+        ${isLoggedIn ? `
+        <li>
+          <a href="#" id="logout-link">Logout</a>
+        </li>` : ''}
       </ul>
     </nav>
   `;
 }
+
