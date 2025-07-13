@@ -2,6 +2,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
   const messageEl = document.getElementById("message");
 
+  const params = new URLSearchParams(window.location.search);
+
+  const prefillUsername = params.get("username");
+  if (prefillUsername) {
+    loginForm.username.value = prefillUsername;
+  }
+  const error = params.get("error");
+  const success = params.get("success");
+
+  if (error === "invalid") {
+    messageEl.textContent = "Invalid username or password.";
+    messageEl.style.color = "red";
+  } else if (success === "created") {
+    messageEl.textContent = "Account created! Please log in.";
+    messageEl.style.color = "green";
+  }
+
   function getUsers() {
     return JSON.parse(localStorage.getItem("users") || "{}");
   }
@@ -11,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const username = loginForm.username.value.trim();
     const password = loginForm.password.value;
-
     const users = getUsers();
 
     if (users[username] && users[username].password === password) {
@@ -20,8 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
       messageEl.textContent = "Login successful!";
       setTimeout(() => (window.location.href = "index.html"), 1000);
     } else {
-      messageEl.style.color = "red";
-      messageEl.textContent = "Invalid username or password.";
+
+      const newParams = new URLSearchParams();
+      newParams.set("username", username);
+      newParams.set("error", "invalid");
+      window.location.search = newParams.toString();
     }
   });
 });
