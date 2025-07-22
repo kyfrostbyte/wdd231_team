@@ -560,6 +560,7 @@ header p {
     background-color: #383332;
     width: 100%;
     animation: fadeInDown 0.4s ease forwards;
+    align-items: center;
 }
 
 .nav-links.active {
@@ -579,6 +580,7 @@ header p {
     padding: 0.5rem 0;
     font-weight: 800;
     transition: color 0.3s ease, transform 0.2s ease;
+    text-align: center;
 }
 
 .nav-links a:hover {
