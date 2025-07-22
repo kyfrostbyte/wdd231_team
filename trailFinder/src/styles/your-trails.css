@@ -1,0 +1,31 @@
+.your-trails-content {
+    padding: 2rem;
+    background-color: var(--color-background-light);
+    border-radius: 8px;
+    box-shadow: var(--shadow-elevation-low);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.your-trails-content h1 {
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.your-trails-content p {
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.your-trails-content a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.your-trails-content a:hover {
+    text-decoration: underline;
+}

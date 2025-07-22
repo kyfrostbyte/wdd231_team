@@ -26,8 +26,8 @@ export function navTemplate() {
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="coming-soon.html">Trails</a></li>
-        <li><a href="coming-soon.html">About</a></li>
+        <li><a href="your-trails.html">Your Trails</a></li>
+        <li><a href="about.html">About</a></li>
         <li>
           <a href="${isLoggedIn ? 'profile.html' : 'login.html'}">
             ${isLoggedIn ? 'Profile' : 'Login'}
