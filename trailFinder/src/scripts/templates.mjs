@@ -21,6 +21,7 @@ export function navTemplate() {
         <a href="#" class="nav-logo">
           <img src="src/assets/logo.webp" alt="logo of a green leaf" />
         </a>
+        <h1 class="site-title">Trail Finder</h1>
         <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
       </div>
       <ul class="nav-links">

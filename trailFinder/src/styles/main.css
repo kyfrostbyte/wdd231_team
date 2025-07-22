@@ -367,6 +367,12 @@ header p {
     object-fit: cover;
 }
 
+@media (max-width: 768px) {
+    .trail-card img {
+        height: 8rem;
+    }
+}
+
 .card-content {
     padding: 1.25rem;
     /* Equivalent to p-5 */
@@ -548,6 +554,12 @@ header p {
 
 .nav-logo img:hover {
     transform: scale(1.1);
+}
+
+.site-title {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 .nav-links {

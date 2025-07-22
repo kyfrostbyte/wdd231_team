@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
       trailCard.innerHTML = `
         <img src="${trail.imageUrl}" alt="${trail.name}" />
         <div class="card-content">
-          <h3 class="card-title">${trail.name}</h3>
           <p class="card-location">${trail.location}</p>
           <div class="card-details">
             <span class="difficulty-badge ${trail.difficulty.toLowerCase()}">${trail.difficulty}</span>
@@ -32,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="card-rating">${'★'.repeat(Math.round(trail.rating))}${'☆'.repeat(5 - Math.round(trail.rating))} (${trail.rating})</span>
           </div>
           <p class="card-description">${trail.description}</p>
-          <button class="view-details-button">View Details</button>
         </div>
       `;
       searchResults.appendChild(trailCard);
