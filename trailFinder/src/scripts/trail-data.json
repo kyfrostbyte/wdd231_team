@@ -1,4 +1,3 @@
-
 [
   {
     "id": 1,
@@ -552,57 +551,167 @@
   },
   {
     "id": 51,
-    "name": "Cress Creek Nature Trail",
-    "location": "Rexburg, ID",
-    "difficulty": "Easy",
-    "length": 1.2,
-    "elevationGain": 229,
-    "rating": 4.4,
-    "description": "A family-friendly trail with educational signs along the way, leading to a beautiful view of the Snake River.",
-    "imageUrl": "https://placehold.co/600x400/fbbf24/ffffff?text=Cress+Creek"
+    "name": "Mount Sanitas Trail",
+    "location": "Boulder, CO",
+    "difficulty": "Moderate",
+    "length": 3.1,
+    "elevationGain": 1250,
+    "rating": 4.6,
+    "description": "A popular and challenging loop trail offering panoramic views of Boulder and the surrounding plains.",
+    "imageUrl": "https://placehold.co/600x400/9ca3af/ffffff?text=Mount+Sanitas"
   },
   {
     "id": 52,
-    "name": "R Mountain Trail",
-    "location": "Rexburg, ID",
-    "difficulty": "Moderate",
-    "length": 3.4,
-    "elevationGain": 1030,
-    "rating": 4.5,
-    "description": "A popular hike to the top of 'R' Mountain, offering panoramic views of Rexburg and the surrounding area.",
-    "imageUrl": "https://placehold.co/600x400/f59e0b/ffffff?text=R+Mountain"
+    "name": "Grays and Torreys Peaks Trail",
+    "location": "Georgetown, CO",
+    "difficulty": "Hard",
+    "length": 8.5,
+    "elevationGain": 3600,
+    "rating": 4.9,
+    "description": "A classic Colorado 14er hike, often done as a loop to bag two peaks. Offers stunning alpine scenery.",
+    "imageUrl": "https://placehold.co/600x400/a3a3a3/ffffff?text=Grays+and+Torreys"
   },
   {
     "id": 53,
-    "name": "Teton River Trail",
-    "location": "Rexburg, ID",
+    "name": "Garden of the Gods - Palmer Trail",
+    "location": "Colorado Springs, CO",
     "difficulty": "Easy",
-    "length": 5.5,
-    "elevationGain": 100,
-    "rating": 4.3,
-    "description": "A flat, paved trail that follows the Teton River, perfect for walking, running, and biking.",
-    "imageUrl": "https://placehold.co/600x400/ec4899/ffffff?text=Teton+River+Trail"
+    "length": 2.5,
+    "elevationGain": 200,
+    "rating": 4.7,
+    "description": "A less crowded trail in Garden of the Gods, offering different perspectives of the iconic red rock formations.",
+    "imageUrl": "https://placehold.co/600x400/d1d5db/ffffff?text=Palmer+Trail"
   },
   {
     "id": 54,
-    "name": "Darby Canyon Wind Cave Trail",
-    "location": "Driggs, ID",
-    "difficulty": "Hard",
-    "length": 5.8,
-    "elevationGain": 1800,
-    "rating": 4.7,
-    "description": "A challenging hike to a large wind cave, with stunning views of the Teton Range.",
-    "imageUrl": "https://placehold.co/600x400/ef4444/ffffff?text=Darby+Canyon"
+    "name": "Brainard Lake Loop",
+    "location": "Ward, CO",
+    "difficulty": "Easy",
+    "length": 3.0,
+    "elevationGain": 150,
+    "rating": 4.8,
+    "description": "A beautiful and accessible loop around Brainard Lake, with stunning views of the Indian Peaks Wilderness.",
+    "imageUrl": "https://placehold.co/600x400/e5e7eb/ffffff?text=Brainard+Lake"
   },
   {
     "id": 55,
-    "name": "Palisades Creek Trail",
-    "location": "Swan Valley, ID",
-    "difficulty": "Moderate",
-    "length": 13.4,
+    "name": "Hanging Lake Winter Trail",
+    "location": "Glenwood Springs, CO",
+    "difficulty": "Hard",
+    "length": 3.2,
     "elevationGain": 1200,
+    "rating": 4.5,
+    "description": "The winter route to Hanging Lake, requiring microspikes or snowshoes. Offers a unique, serene experience.",
+    "imageUrl": "https://placehold.co/600x400/3b82f6/ffffff?text=Hanging+Lake+Winter"
+  },
+  {
+    "id": 56,
+    "name": "Bear Lake Trail",
+    "location": "Rocky Mountain National Park, CO",
+    "difficulty": "Easy",
+    "length": 0.6,
+    "elevationGain": 45,
+    "rating": 4.7,
+    "description": "A very popular, accessible loop trail around beautiful Bear Lake, offering stunning views of Hallett Peak and Longs Peak.",
+    "imageUrl": "https://placehold.co/600x400/9ca3af/ffffff?text=Bear+Lake"
+  },
+  {
+    "id": 57,
+    "name": "Alberta Falls Trail",
+    "location": "Rocky Mountain National Park, CO",
+    "difficulty": "Easy",
+    "length": 1.7,
+    "elevationGain": 200,
     "rating": 4.6,
-    "description": "A beautiful trail that follows Palisades Creek to Lower and Upper Palisades Lakes.",
-    "imageUrl": "https://placehold.co/600x400/22c55e/ffffff?text=Palisades+Creek"
+    "description": "A short, scenic hike to a beautiful waterfall, popular for families and those looking for a quick nature escape.",
+    "imageUrl": "https://placehold.co/600x400/a3a3a3/ffffff?text=Alberta+Falls"
+  },
+  {
+    "id": 58,
+    "name": "Dream Lake Trail",
+    "location": "Rocky Mountain National Park, CO",
+    "difficulty": "Moderate",
+    "length": 2.2,
+    "elevationGain": 450,
+    "rating": 4.8,
+    "description": "A stunning hike to a picturesque alpine lake, offering incredible reflections of the surrounding peaks.",
+    "imageUrl": "https://placehold.co/600x400/d1d5db/ffffff?text=Dream+Lake"
+  },
+  {
+    "id": 59,
+    "name": "Lake Haiyaha Trail",
+    "location": "Rocky Mountain National Park, CO",
+    "difficulty": "Moderate",
+    "length": 3.2,
+    "elevationGain": 740,
+    "rating": 4.7,
+    "description": "A beautiful trail leading to a unique, turquoise-colored lake surrounded by a boulder field.",
+    "imageUrl": "https://placehold.co/600x400/e5e7eb/ffffff?text=Lake+Haiyaha"
+  },
+  {
+    "id": 60,
+    "name": "Skyline Traverse",
+    "location": "Boulder, CO",
+    "difficulty": "Expert",
+    "length": 17,
+    "elevationGain": 6000,
+    "rating": 4.9,
+    "description": "A challenging and iconic traverse of the peaks above Boulder, offering incredible views and a true test of endurance.",
+    "imageUrl": "https://placehold.co/600x400/3b82f6/ffffff?text=Skyline+Traverse"
+  },
+  {
+    "id": 61,
+    "name": "Royal Arch Trail - Longer Loop",
+    "location": "Boulder, CO",
+    "difficulty": "Hard",
+    "length": 5.5,
+    "elevationGain": 1600,
+    "rating": 4.7,
+    "description": "An extended version of the Royal Arch Trail, offering more mileage and varied terrain with equally rewarding views.",
+    "imageUrl": "https://placehold.co/600x400/ef4444/ffffff?text=Royal+Arch+Loop"
+  },
+  {
+    "id": 62,
+    "name": "Mount Falcon Castle Trail",
+    "location": "Indian Hills, CO",
+    "difficulty": "Moderate",
+    "length": 7.6,
+    "elevationGain": 1500,
+    "rating": 4.5,
+    "description": "A historic trail leading to the ruins of a castle, offering great views of the Denver skyline and surrounding mountains.",
+    "imageUrl": "https://placehold.co/600x400/22c55e/ffffff?text=Mount+Falcon"
+  },
+  {
+    "id": 63,
+    "name": "Red Rocks Trading Post Trail",
+    "location": "Morrison, CO",
+    "difficulty": "Easy",
+    "length": 1.4,
+    "elevationGain": 150,
+    "rating": 4.6,
+    "description": "A short, easy loop trail around the iconic Red Rocks Amphitheatre, perfect for a quick stroll and scenic views.",
+    "imageUrl": "https://placehold.co/600x400/f97316/ffffff?text=Red+Rocks"
+  },
+  {
+    "id": 64,
+    "name": "Garden of the Gods - Siamese Twins Trail",
+    "location": "Colorado Springs, CO",
+    "difficulty": "Easy",
+    "length": 1.0,
+    "elevationGain": 100,
+    "rating": 4.7,
+    "description": "A short, easy trail leading to the unique Siamese Twins rock formation, with a natural window framing Pikes Peak.",
+    "imageUrl": "https://placehold.co/600x400/8b5cf6/ffffff?text=Siamese+Twins"
+  },
+  {
+    "id": 65,
+    "name": "Manitou Incline - Descent Route",
+    "location": "Manitou Springs, CO",
+    "difficulty": "Easy",
+    "length": 3.0,
+    "elevationGain": 0,
+    "rating": 4.0,
+    "description": "The designated descent route for the Manitou Incline, offering a more gradual return through a scenic forest.",
+    "imageUrl": "https://placehold.co/600x400/ec4899/ffffff?text=Incline+Descent"
   }
 ]
