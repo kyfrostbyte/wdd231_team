@@ -17,27 +17,6 @@
       </div>
     </main>
     <footer></footer>
-    <script type="module">
-      document.addEventListener('DOMContentLoaded', () => {
-        const trailsContainer = document.getElementById('trails-container');
-        const loggedInUser = localStorage.getItem('loggedInUser');
-
-        if (loggedInUser) {
-          // User is logged in, show recently visited trails (placeholder)
-          trailsContainer.innerHTML = `
-            <h1>Your Recently Visited Trails</h1>
-            <p>This section will display your recently visited trails.</p>
-            <p>Feature coming soon!</p>
-          `;
-        } else {
-          // User is not logged in, prompt to sign in
-          trailsContainer.innerHTML = `
-            <h1>Access Your Trails</h1>
-            <p>Please <a href="login.html">sign in</a> to view your recently visited trails.</p>
-            <p>Don't have an account? <a href="create-account.html">Create one here</a>.</p>
-          `;
-        }
-      });
-    </script>
+    <script src="src/scripts/your-trails.js" type="module"></script>
   </body>
 </html>

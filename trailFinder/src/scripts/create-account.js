@@ -82,7 +82,7 @@ form.addEventListener("submit", (e) => {
   }
 
   // Save user
-  users[username] = { name, email, password, phone };
+  users[username] = { name, email, password, phone, favoriteTrails: [] };
   setUsers(users);
 
   // Log the user in by saving username in localStorage
