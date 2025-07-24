@@ -9,6 +9,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+nav{
+  transform: translateY(-13px);
+  margin-bottom: 2rem;
+
+}
 
 /* Profile container */
 .profile-container {
