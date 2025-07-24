@@ -20,6 +20,7 @@ export function renderTrailCard(trail) {
   const heartIconSrc = isFavorited ? './src/assets/heart-filled.svg' : './src/assets/heart-empty.svg';
 
   trailCard.innerHTML = `
+  <div class="trail-card">
     <img src="${trail.imageUrl}" alt="${trail.name}" />
     <div class="card-content">
       <p class="card-location">${trail.location}</p>
@@ -30,7 +31,7 @@ export function renderTrailCard(trail) {
         <img src="${heartIconSrc}" alt="Favorite" class="favorite-icon" data-trail-id="${trail.id}" />
       </div>
       <p class="card-description">${trail.description}</p>
-    </div>
+    </div></div>
   `;
 
   const favoriteIcon = trailCard.querySelector('.favorite-icon');

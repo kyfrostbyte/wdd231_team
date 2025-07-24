@@ -29,3 +29,19 @@
 .your-trails-content a:hover {
     text-decoration: underline;
 }
+
+nav{
+    transform: translateY(-18px);
+}
+
+footer{
+    margin-top: auto;
+}
+
+#trails-container {
+  padding: 1rem; /* or any value like 16px */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* space between cards */
+}
+
