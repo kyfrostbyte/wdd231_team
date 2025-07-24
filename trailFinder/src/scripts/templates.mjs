@@ -11,60 +11,73 @@ export function footerTemplate() {
 }
 
 export function renderTrailCard(trail) {
-  const trailCard = document.createElement('div');
-  trailCard.classList.add('trail-card');
-  const loggedInUser = localStorage.getItem('loggedInUser');
-  const users = JSON.parse(localStorage.getItem('users') || '{}');
-  const favoriteTrails = loggedInUser && users[loggedInUser] ? users[loggedInUser].favoriteTrails || [] : [];
+  const trailCard = document.createElement("div");
+  trailCard.classList.add("trail-card");
+
+  const loggedInUser = localStorage.getItem("loggedInUser");
+  const users = JSON.parse(localStorage.getItem("users") || "{}");
+  const favoriteTrails =
+    loggedInUser && users[loggedInUser]
+      ? users[loggedInUser].favoriteTrails || []
+      : [];
   const isFavorited = favoriteTrails.includes(trail.id);
-  const heartIconSrc = isFavorited ? './src/assets/heart-filled.svg' : './src/assets/heart-empty.svg';
+  const heartIconSrc = isFavorited
+    ? "./src/assets/heart-filled.svg"
+    : "./src/assets/heart-empty.svg";
 
   trailCard.innerHTML = `
-  <div class="trail-card">
     <img src="${trail.imageUrl}" alt="${trail.name}" />
     <div class="card-content">
       <p class="card-location">${trail.location}</p>
       <div class="card-details">
         <span class="difficulty-badge ${trail.difficulty.toLowerCase()}">${trail.difficulty}</span>
         <span>${trail.length} miles</span>
-        <span class="card-rating">${'★'.repeat(Math.round(trail.rating))}${'☆'.repeat(5 - Math.round(trail.rating))} (${trail.rating})</span>
+        <span class="card-rating">${"★".repeat(Math.round(trail.rating))}${"☆".repeat(5 - Math.round(trail.rating))} (${trail.rating})</span>
         <img src="${heartIconSrc}" alt="Favorite" class="favorite-icon" data-trail-id="${trail.id}" />
       </div>
       <p class="card-description">${trail.description}</p>
-    </div></div>
+    </div>
   `;
 
-  const favoriteIcon = trailCard.querySelector('.favorite-icon');
-  favoriteIcon.addEventListener('click', (event) => {
-    event.stopPropagation(); // Prevent card click if any
+  const favoriteIcon = trailCard.querySelector(".favorite-icon");
+  favoriteIcon.addEventListener("click", (event) => {
+    event.stopPropagation();
+
     if (!loggedInUser) {
-      alert('Please log in to favorite trails.');
+      alert("Please log in to favorite trails.");
       return;
     }
 
     const trailId = parseInt(event.target.dataset.trailId);
-    let currentUserFavorites = users[loggedInUser].favoriteTrails || [];
+
+    // READ the latest users from localStorage every click to avoid stale data
+    const users = JSON.parse(localStorage.getItem("users") || "{}");
+    let currentUserFavorites = users[loggedInUser]?.favoriteTrails || [];
 
     if (currentUserFavorites.includes(trailId)) {
       // Remove from favorites
       currentUserFavorites = currentUserFavorites.filter(id => id !== trailId);
-      event.target.src = './src/assets/heart-empty.svg';
+      event.target.src = "./src/assets/heart-empty.svg";
     } else {
       // Add to favorites
       currentUserFavorites.push(trailId);
-      event.target.src = './src/assets/heart-filled.svg';
+      event.target.src = "./src/assets/heart-filled.svg";
     }
 
     users[loggedInUser].favoriteTrails = currentUserFavorites;
-    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem("users", JSON.stringify(users));
+
+    // Notify other parts of the app about the change
+    document.dispatchEvent(new CustomEvent('favoriteChanged'));
   });
 
   return trailCard;
 }
 
+
 export function navTemplate() {
-  const users = JSON.parse(localStorage.getItem('users') || '{}');
-  const loggedInUser = localStorage.getItem('loggedInUser');
+  const users = JSON.parse(localStorage.getItem("users") || "{}");
+  const loggedInUser = localStorage.getItem("loggedInUser");
   const isLoggedIn = loggedInUser && users[loggedInUser];
 
   return `
@@ -81,16 +94,19 @@ export function navTemplate() {
         <li><a href="your-trails.html">Your Trails</a></li>
         <li><a href="about.html">About</a></li>
         <li>
-          <a href="${isLoggedIn ? 'profile.html' : 'login.html'}">
-            ${isLoggedIn ? 'Profile' : 'Login'}
+          <a href="${isLoggedIn ? "profile.html" : "login.html"}">
+            ${isLoggedIn ? "Profile" : "Login"}
           </a>
         </li>
-        ${isLoggedIn ? `
+        ${
+          isLoggedIn
+            ? `
         <li>
           <a href="#" id="logout-link">Logout</a>
-        </li>` : ''}
+        </li>`
+            : ""
+        }
       </ul>
     </nav>
   `;
 }
-

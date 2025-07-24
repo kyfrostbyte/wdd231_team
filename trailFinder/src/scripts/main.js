@@ -19,11 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Wait for everything to render
 document.addEventListener("DOMContentLoaded", () => {
   const logoutLink = document.getElementById("logout-link");
-  logoutLink.addEventListener("click", (e) => {
+  if (logoutLink) {
+    logoutLink.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("loggedInUser");
       window.location.href = "index.html?success=loggedout";
     });
   }
+});
 
-);

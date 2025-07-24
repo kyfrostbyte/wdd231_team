@@ -1,3 +1,4 @@
+
 .your-trails-content {
     padding: 2rem;
     background-color: var(--color-background-light);
@@ -6,6 +7,7 @@
     margin-top: 2rem;
     text-align: center;
 }
+
 
 .your-trails-content h1 {
     color: var(--color-primary-dark);
@@ -29,19 +31,24 @@
 .your-trails-content a:hover {
     text-decoration: underline;
 }
-
-nav{
-    transform: translateY(-18px);
+body{
+    padding:0;
+    margin:0;
 }
+
 
 footer{
     margin-top: auto;
 }
 
 #trails-container {
-  padding: 1rem; /* or any value like 16px */
+  justify-content: center;
+  padding: 1rem; 
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem; /* space between cards */
+  gap: 2rem; 
+  max-width: 600px;
 }
+
+
 
